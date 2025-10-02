@@ -120,5 +120,5 @@ footer {
 }
 
 body:not(.dark-theme) #themeToggle {
-  color: #333; /
+  color: #333; 
 }
