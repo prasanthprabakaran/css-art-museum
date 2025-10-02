@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Art</title>
+  <style>
+    body {
+      background-color: #fdf6e3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin: 0;
+    }
+    .circle {
+      width: 100px;
+      height: 100px;
+      background: #ff6b6b;
+      border-radius: 50%;
+      animation: bounce 2s infinite alternate;
+    }
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-30px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+</body>
+</html>
