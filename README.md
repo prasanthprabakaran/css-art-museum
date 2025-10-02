@@ -1,2 +1,32 @@
-# css-art-museum
-Welcome to the CSS Art Museum – an open-source initiative where creativity meets code! 💫  This project is a digital gallery dedicated to showcasing artworks created with only HTML &amp; CSS. The idea is simple: every contributor adds their own CSS creation, and together we build a growing museum of styles, colors, and imagination.
+# 🎨 CSS Art Museum
+
+Welcome to the **CSS Art Museum**!  
+This is an open-source project where developers can showcase their creativity using **pure CSS and HTML**.  
+
+Contribute your **CSS Art** during Hacktoberfest 2025 and become part of our gallery!  
+
+---
+
+## 🚀 How to Contribute
+1. Fork this repo  
+2. Create a new file inside the `/arts/` folder  
+   - Name your file as `yourname-artname.html`  
+3. Add your CSS artwork (only HTML + CSS allowed)  
+4. Add your art details in the `index.html` gallery page  
+5. Submit a Pull Request 🎉  
+
+---
+
+## 📌 Rules
+- Only **original CSS art** (no images/JS)  
+- Keep code clean and commented  
+- Small contributions (like text/typo only) will be marked invalid  
+- PRs will be accepted with `hacktoberfest-accepted` label  
+
+---
+
+## 🏆 Hacktoberfest Note
+This repo is part of **Hacktoberfest 2025**.  
+All valid PRs will count towards your 4 PRs.  
+
+Happy contributing 💖
