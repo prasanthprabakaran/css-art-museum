@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Geometric Art</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f8ff;
+    }
+
+    .geometric-art {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: repeat(3, 80px);
+      gap: 15px;
+    }
+
+    .square {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+      border-radius: 12px;
+      transform: rotate(0deg);
+      transition: transform 0.5s;
+    }
+
+    .square:hover {
+      transform: rotate(45deg) scale(1.1);
+    }
+
+    .circle {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, #6a11cb, #2575fc);
+      border-radius: 50%;
+      transition: transform 0.5s;
+    }
+
+    .circle:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="geometric-art">
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="square"></div>
+  </div>
+</body>
+</html>
