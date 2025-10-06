@@ -5,38 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contributors</title>
   <link rel="stylesheet" href="contributors.css">
-
-  <!-- Sparkle Style -->
-  <style>
-    .sparkle {
-      position: fixed;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle, white 20%, rgba(255,255,255,0.8) 40%, transparent 70%);
-      box-shadow: 0 0 10px white, 0 0 20px currentColor, 0 0 40px currentColor;
-      animation: sparkle-fade 1s ease-out forwards;
-    }
-
-    @keyframes sparkle-fade {
-      0% {
-        transform: scale(0.5);
-        opacity: 1;
-        filter: brightness(2);
-      }
-      50% {
-        transform: scale(1.5);
-        opacity: 0.9;
-        filter: brightness(3);
-      }
-      100% {
-        transform: scale(0.2);
-        opacity: 0;
-        filter: brightness(1);
-      }
-    }
-  </style>
 </head>
 <body>
   <h1>✨ Our Amazing Contributors ✨</h1>
@@ -79,37 +47,7 @@
     }
 
     loadContributors();
-
-    // Sparkle Effect
-    function createSparkle(x, y) {
-      const sparkle = document.createElement("div");
-      sparkle.className = "sparkle";
-
-      const colors = ["#ff0080", "#00f0ff", "#39ff14", "#ffd300", "#ff5f1f", "#bd00ff"];
-      sparkle.style.color = colors[Math.floor(Math.random() * colors.length)];
-
-      sparkle.style.left = `${x}px`;
-      sparkle.style.top = `${y}px`;
-
-      document.body.appendChild(sparkle);
-      setTimeout(() => sparkle.remove(), 1000);
-    }
-
-    // Mouse move sparkles
-    document.addEventListener("mousemove", e => {
-      for (let i = 0; i < 2; i++) {
-        createSparkle(e.pageX + (Math.random() * 20 - 10), e.pageY + (Math.random() * 20 - 10));
-      }
-    });
-
-    // Scroll sparkles
-    document.addEventListener("scroll", () => {
-      const x = window.innerWidth / 2;
-      const y = window.scrollY % window.innerHeight;
-      for (let i = 0; i < 5; i++) {
-        createSparkle(x + (Math.random() * 100 - 50), y + (Math.random() * 50));
-      }
-    });
+    
   </script>
 </body>
 </html>
