@@ -111,7 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Parallax - Disabled for better scroll performance
   // Uncomment below if you want parallax effect (may cause scroll jitter)
-  /*
+  
+  
   let ticking = false;
   function updateParallax() {
     const scrolled = window.pageYOffset;
@@ -121,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   window.addEventListener('scroll', () => { if (!ticking) { ticking = true; updateParallax(); } });
-  */
+  
 
   const style = document.createElement('style');
   style.textContent = `
