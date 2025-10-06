@@ -5,25 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contributors</title>
   <link rel="stylesheet" href="contributors.css">
+
+  <!-- Sparkle Style -->
   <style>
-    /* Sparkle style */
     .sparkle {
       position: fixed;
-      width: 8px;
-      height: 8px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       pointer-events: none;
-      animation: sparkle-fade 1s linear forwards;
+      background: radial-gradient(circle, white 20%, rgba(255,255,255,0.8) 40%, transparent 70%);
+      box-shadow: 0 0 10px white, 0 0 20px currentColor, 0 0 40px currentColor;
+      animation: sparkle-fade 1s ease-out forwards;
     }
 
     @keyframes sparkle-fade {
-      from {
-        transform: scale(1);
+      0% {
+        transform: scale(0.5);
         opacity: 1;
+        filter: brightness(2);
       }
-      to {
-        transform: scale(0.3);
+      50% {
+        transform: scale(1.5);
+        opacity: 0.9;
+        filter: brightness(3);
+      }
+      100% {
+        transform: scale(0.2);
         opacity: 0;
+        filter: brightness(1);
       }
     }
   </style>
@@ -70,22 +80,18 @@
 
     loadContributors();
 
-    // 🎇 Sparkle effect function
+    // Sparkle Effect
     function createSparkle(x, y) {
       const sparkle = document.createElement("div");
       sparkle.className = "sparkle";
 
-      // Random color
-      const colors = ["#ff4757", "#1e90ff", "#2ed573", "#ffa502", "#eccc68", "#ff6b81", "#a55eea"];
-      sparkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      const colors = ["#ff0080", "#00f0ff", "#39ff14", "#ffd300", "#ff5f1f", "#bd00ff"];
+      sparkle.style.color = colors[Math.floor(Math.random() * colors.length)];
 
-      // Position sparkle
       sparkle.style.left = `${x}px`;
       sparkle.style.top = `${y}px`;
 
       document.body.appendChild(sparkle);
-
-      // Remove after animation
       setTimeout(() => sparkle.remove(), 1000);
     }
 
