@@ -15,7 +15,6 @@ html {
 
 /* Elegant Art Museum Color Variables */
 :root {
-  /* Light theme - Museum whites and sophisticated grays */
   --primary-bg: #fafafa;
   --secondary-bg: #ffffff;
   --accent-bg: #f8f8f8;
@@ -30,6 +29,10 @@ html {
   --accent-subtle: #f0efff;
   --gold-accent: #d4af37;
   --museum-warm: #f5f4f0;
+  --button-bg: #f6f8fa;
+  --button-border: rgba(27, 31, 36, 0.15);
+  --button-hover-bg: #f3f4f6;
+  --count-bg: rgba(209, 213, 219, 0.5);
   --button-bg: #f6f8fa;
   --button-border: rgba(27, 31, 36, 0.15);
   --button-hover-bg: #f3f4f6;
@@ -104,6 +107,7 @@ body::after {
 header {
   text-align: center;
   margin-bottom: 40px; /* Reduced margin */
+  margin-bottom: 40px; /* Reduced margin */
   position: relative;
   width: 100%;
 }
@@ -113,15 +117,13 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 25px; /* Reduced padding */
-  
-  /* Fixed positioning */
+  padding: 10px 25px;
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 95%; /* Contained width */
-  max-width: 1400px; /* Max width for large screens */
+  width: 95%;
+  max-width: 1400px;
   z-index: 100;
   
   background: rgba(255, 255, 255, 0.5);
@@ -818,3 +820,183 @@ footer {
 }
 
 
+
+
+.card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 5px;
+  padding: 0 4px 4px;
+}
+
+.view-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--secondary-text);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-code button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.like-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--secondary-text);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Unified hover effects for both buttons */
+.view-code:hover,
+.like-container:hover {
+  background-color: var(--accent-subtle);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.1);
+}
+
+/* Dark theme adjustments */
+.dark-theme .view-code,
+.dark-theme .like-container {
+  border-color: var(--button-border);
+  color: var(--secondary-text);
+}
+
+.dark-theme .view-code:hover,
+.dark-theme .like-container:hover {
+  background-color: var(--accent-subtle);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  box-shadow: 0 4px 15px rgba(139, 127, 255, 0.2);
+}
+
+/* Icon styling to inherit color and handle the 'liked' state */
+.heart-icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor; /* Icon color will now match the text color */
+  fill: none;
+  transition: fill 0.2s, stroke 0.2s;
+}
+
+.heart-icon.liked {
+  fill: #ff4d4d;
+  stroke: #ff4d4d;
+}
+
+/* This prevents the icon from changing color on hover if it's already liked */
+.like-container:hover .heart-icon.liked {
+  color: #ff4d4d;
+}
+
+.like-count {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+/* === Sort by Likes Button Styling === */
+#sort-by-likes-btn {
+  /* Positioning and Layout */
+  display: inline-block;
+  margin: 20px auto 0; /* Adds space below the welcome message */
+  
+  /* Appearance */
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px 24px;
+  color: var(--secondary-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  
+  /* Effects & Transitions */
+  box-shadow: 0 4px 12px var(--shadow-light), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#sort-by-likes-btn:hover {
+  background: linear-gradient(135deg, var(--accent-subtle), rgba(212, 175, 55, 0.08));
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px var(--shadow-medium), 0 0 0 1px rgba(108, 99, 255, 0.2);
+}
+
+#sort-by-likes-btn:active {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+/* Dark theme hover effect adjustment */
+.dark-theme #sort-by-likes-btn:hover {
+  box-shadow: 0 8px 20px var(--shadow-medium), 0 0 0 1px rgba(139, 127, 255, 0.3);
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  #sort-by-likes-btn {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Dark theme styles for header elements */
+.dark-theme header nav {
+  background: rgba(26, 26, 26, 0.65); /* Darker, more defined glass effect */
+  border: 1px solid rgba(139, 127, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.dark-theme #search-bar {
+  background: rgba(40, 40, 40, 0.75); /* Contrasting dark background */
+  border-color: var(--border-color);
+  color: var(--primary-text);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.06); /* Subtle inner highlight */
+}
+
+.dark-theme #search-bar::placeholder {
+  color: var(--secondary-text);
+  opacity: 0.9;
+}
+
+.dark-theme #search-bar:focus {
+  background: rgba(50, 50, 50, 0.8);
+  border-color: var(--accent-color);
+  box-shadow:
+    0 0 0 3px rgba(139, 127, 255, 0.25), /* Added a focus ring for accessibility */
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.dark-theme header p {
+  /* Using a solid background from your variables for better readability */
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  color: var(--secondary-text);
+  /* The blur effect is not needed with a solid background */
+  backdrop-filter: none; 
+}

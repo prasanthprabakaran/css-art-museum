@@ -105,11 +105,6 @@
     "author": "MBM08"
   },
   {
-    "file": "matrix-pulse-loading.html",
-    "title": "Matrix Pulse Loading",
-    "author": "Unknown"
-  },
-  {
     "file": "yash-zoomout.html",
     "title": "Solar System",
     "author": "Yash"
@@ -183,11 +178,6 @@
     "file": "ujjwal-peacock.html",
     "title": "Peakcock",
     "author": "ujjwal"
-  },
-  {
-    "file": "ring-loading.html",
-    "title": "Ring Loading",
-    "author": "Ritesh"
   },
   {
     "file": "night_sky.html",
@@ -294,6 +284,7 @@
     "title": "Cosmic Orb",
     "author": "Rajat"
   },
+  {
     "file": "scenery.html",
     "title": "Scenery",
     "author": "Soham"
