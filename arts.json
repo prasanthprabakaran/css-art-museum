@@ -305,6 +305,11 @@
     "author": "Nitish K"
   },
   {
+    "file": "mathurojus-sunset-landscape.html",
+    "title": "CSS Sunset Landscape",
+    "author": "Mathurojus"
+  },
+  {
     "file": "grid-background.html",
     "title": "Animated Grid backgound ",
     "author": "Shivin"
@@ -320,10 +325,39 @@
     "author": "Thanuja Kedila"
   },
   {
-    "file" : "Prasanth-style-text.html",
+    "file": "Prasanth-style-text.html",
     "title": "CSS text layer",
     "author": "Prasanth"
+  },
+  {
+    "file": "parth-artwork.html",
+    "title": "CSS Sunset landscape",
+    "author": "Parth"
+  },
+  {
+    "file": "sandeep-solarsystem.html",
+    "title": "Solar System",
+    "author": "sandeep"
+  },
+  {
+    "file": "forest.html",
+    "title": "Forest",
+    "author": "Siddhant"
+  },
+  {
+    "file": "aditi-meteor-shower.html",
+    "title": "Meteor-Shower",
+    "author": "Aditi"
+  },
+  {
+    "file": "Snowy-night.html",
+    "title": "Snowing Mountain Scene",
+    "author": "Vidhan Sachdeva"
+  },
+  {
+    "file": "pink_ponk.html",
+    "title": "Animated Pink Ponk Ball",
+    "author": "Soumyosish"
   }
 
 ]
-
